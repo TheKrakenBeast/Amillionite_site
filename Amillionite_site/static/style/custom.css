@@ -1,0 +1,329 @@
+@font-face {
+    font-family: 'UndecappedVinyl-r3dy';
+    src: url('/static/font/UndecappedVinyl-r3dy.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'pincoyablack';
+    src: url('/static/font/pincoyablack/pincoyablack.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'rollergirls';
+    src: url('/static/font/rollergirls/ROLLERGI.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'opensans';
+    src: url('/static/font/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+}
+
+/*body {
+    !*min-width: 550px;*!
+    background-color: #ffc4e2;
+    background-image: url("/static/img/pink-cigarettes.jpg");
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: auto;
+}*/
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    /*background-color: #ffc4e2;*/
+    font-size: 1em;
+    line-height: 1.5em;
+    background-image: url("/static/img/restoration.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /*background-blend-mode: darken;*/
+    overflow: auto;
+}
+
+@media (min-width: 48em) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+    body {
+        font-size: 1em;
+    }
+
+    .blogpost, .contact {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+@media (min-width: 64em) {
+    body {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+
+    .blogpost, .contact {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+}
+
+@media (min-width: 85.375em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    body {
+        font-size: 1.3em;
+    }
+
+    .blogpost, .contact {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+}
+
+@media (min-width: 120em) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    body {
+        font-size: 1.4em;
+    }
+
+    .blogpost, .contact {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (min-width: 160em) {
+    /* big landscape tablets, laptops, and desktops */
+    body {
+        font-size: 1.6em;
+    }
+
+    .blogpost, .contact {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+}
+
+/*@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    !* hi-res laptops and desktops *!
+    body {
+        font-size: 2em;
+    }
+}*/
+
+
+.weird {
+    margin-left: 2rem;
+    margin-right: 3rem;
+    min-width: 28em;
+}
+
+.navbar-dark {
+    font-size: x-large;
+    border-bottom: solid 0.03em rgba(255, 255, 255, 0.3);
+}
+
+.brand {
+    padding-left: 2.5rem;
+    /*padding-right: 2rem;*/
+    color: #ffffff ;
+    font-family: rollergirls, serif;
+    font-size: 2.6em;
+    text-shadow: 0.02em 0.03em rgba(51, 51, 51, 0.6);
+}
+
+.brand img {
+    width: auto;
+    height: 1.2em;
+    margin-right: 1rem;
+    border: 0.02em #ffffff solid;
+    border-radius: 0.1em;
+    transition: all 0.25s ease-out;
+}
+
+.brand img:hover, .brand img:focus, .brand img:active {
+    transform: translateY(-0.12em);
+    filter: brightness(106%);
+    box-shadow: 0 0 0.2em #ffc4e2;
+    transition: all 0.18s ease-in-out;
+}
+
+.navright {
+    padding-right: 1.6rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    text-shadow: 0.02em 0.03em rgba(51, 51, 51, 0.2);
+    font-family: opensans, serif;
+    transition: all 2s ease-out;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: #ffbce1;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-toggler .navbar-toggler-icon {
+    background-image: url("/static/img/hamburger-icon.png");
+    /*width: 2.4em;*/
+    /*height: 2.4em;*/
+    outline: none;
+    -webkit-filter: invert(1);
+    filter: invert(1) alpha(opacity=60);
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler:hover, .navbar-toggler:focus, .navbar-toggler:active {
+    box-shadow: 0 0 0.2em #ffc4e2;
+    outline: none;
+    transition: all 0.18s ease-in-out;
+}
+
+.sticky-offset {
+    top: 56px;
+}
+
+.blogpost {
+    height: auto;
+    /*margin-left: 7%;*/
+    /*margin-right: 6%;*/
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: left;
+}
+
+.contact {
+    height: auto;
+    /*margin-left: 7%;*/
+    /*margin-right: 6%;*/
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+.blogpost h1, h2, h3, h4, h5 {
+    font-family: "opensans", serif;
+}
+
+.blogpost h1 {
+    font-size: 2.4em;
+}
+
+/* unvisited link */
+a:link {
+    color: #ff99d3;
+}
+
+/* visited link */
+a:visited {
+    color: #ff99d3;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #ff99d3;
+
+}
+
+.bookpost {
+    height: auto;
+    margin-left: 6%;
+    margin-right: 5%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0;
+}
+
+.about img {
+    overflow: hidden;
+    width: 100%;
+    padding: 0.5em 0.1em 0.5em 0.1em;
+    min-width: 15em;
+    /*border-radius: 1em;*/
+}
+
+.content {
+    border-radius: 0.5em;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nice-border {
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.light-border {
+    border-radius: 0.5em;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.reading-border {
+    border: solid 1px rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.bandcamp_embed {
+    padding: 0;
+}
+
+.row1 {
+    padding-top: 1em;
+    text-align: center;
+    margin: 0;
+}
+
+.row1 .col-lg {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.socialmedia {
+    padding-top: 1em;
+    display: block;
+    margin: auto;
+}
+
+.socialmedia img {
+    width: auto;
+    height: 3.4rem;
+    -webkit-filter: invert(0.95);
+    filter: invert(0.95);
+    transition: all 0.3s ease-in-out;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    /*padding-top: 25px;*/
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

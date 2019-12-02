@@ -1,0 +1,40 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}
+    News
+{% endblock title %}
+
+{% block navbar %}
+    {{ block.super }}
+{% endblock navbar %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="blogpost content">
+            <h2>{{ news_item.title }}</h2>
+            <h4>by {{ news_item.author }}</h4>
+            <p class="small">{{ news_item.date_added }}</p>
+
+            {% if news_item.image %}
+                <div class="about">
+                    <img src="{{ news_item.image.url }}" alt="">
+                </div>
+            {% endif %}
+
+            {% if news_item.videoEmbed %}
+                <div class="videoWrapper">
+                    <!-- Copy & Pasted from YouTube -->
+                    <div class="videoWrapper">
+                        {{ news_item.videoEmbed | safe }}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="col">
+                <p>{{ news_item.text | linebreaks | urlize }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+

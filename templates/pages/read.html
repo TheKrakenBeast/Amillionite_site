@@ -1,0 +1,28 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}
+    Read
+{% endblock title %}
+
+{% block additional_styles %}
+    {{ block.super }}
+{% endblock additional_styles %}
+
+{% block navbar %}
+    {{ block.super }}
+{% endblock navbar %}
+
+{% block content %}
+    <div class="container-fluid full-container">
+        <article>
+            <section class="blogpost light-border">
+                <img src="{{ full_book.cover_image.url }}"/>
+                <h2>{{ full_book.title }}</h2>
+                <h5>{{ full_book.author }}</h5>
+                <p>{{ full_book.text | linebreaks }}</p>
+            </section>
+        </article>
+    </div>
+{% endblock content %}
+

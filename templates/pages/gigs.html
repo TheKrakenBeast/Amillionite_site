@@ -1,0 +1,31 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}
+    Gigs
+{% endblock title %}
+
+{% block navbar %}
+    {{ block.super }}
+{% endblock navbar %}
+
+{% block content %}
+    <div class="container-fluid">
+
+        <div class="row blogpost content">
+            <div class="col" style="text-align: left">
+                {% for gig in gig %}
+                    <h3>{{ gig.date }}</h3>
+                    <h3><a href="{{ gig.url }}">{{ gig.venue }}</a></h3>
+                    <p class="small">with {{ gig.supports }}</p>
+                    <p>Doors open {{ gig.time }}</p>
+                {% empty %}
+                    <br>
+                    <h4>Amillionite has no gigs coming up :( </h4>
+                    <br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+

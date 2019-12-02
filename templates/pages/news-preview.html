@@ -1,0 +1,43 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}
+    News
+{% endblock title %}
+
+{% block navbar %}
+    {{ block.super }}
+{% endblock navbar %}
+
+{% block content %}
+    <div class="container-fluid">
+        {% for news_items in news_items %}
+            <div class="row blogpost content">
+                <div class="col 6">
+
+                    {% if news_items.image %}
+                        <div class="about">
+                            <a href="{% url 'news-detail' news_items.slug %}">
+                                <img src="{{ news_items.image.url }}" alt=""></a>
+                        </div>
+                    {% endif %}
+                    {% if news_items.videoEmbed %}
+                        <div class="videoWrapper">
+                            <div class="videoWrapper">
+                                {{ news_items.videoEmbed | safe }}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col 6">
+                    {#                        <h2><a href="{% url 'read' news_items.slug %}">{{ news_items.title }}</a></h2>#}
+                    <h2><a href="{% url 'news-detail' news_items.slug %}">{{ news_items.title }}</a></h2>
+                    <h4>by {{ news_items.author }}</h4>
+                    <p class="small">{{ news_items.date_added }}</p>
+                    <p>{{ news_items.snippet | linebreaks | urlize }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
+

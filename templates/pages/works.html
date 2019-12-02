@@ -1,0 +1,29 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}
+    Writing
+{% endblock title %}
+
+{% block navbar %}
+    {{ block.super }}
+{% endblock navbar %}
+
+{% block content %}
+    <div class="container-fluid">
+            {% for books in books %}
+                    <div class="row bookpost light-border">
+                        <div class="col">
+                            <a class="nav-link" href="{% url 'read' books.slug %}">
+                                <img src="{{ books.cover_image.url }}"></a>
+                        </div>
+                        <div class="col light-border" style="text-align: left">
+                            <h2><a href="{% url 'read' books.slug %}">{{ books.title }}</a></h2>
+                            <h5>{{ books.author }}</h5>
+                            <p>{{ books.blurb }}</p>
+                        </div>
+                    </div>
+            {% endfor %}
+    </div>
+{% endblock content %}
+

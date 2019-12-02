@@ -1,0 +1,45 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}
+    About
+{% endblock title %}
+
+{% block navbar %}
+    {{ block.super }}
+{% endblock navbar %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="blogpost content">
+            <h2>{{ about.title }}</h2>
+            {% if about.image %}
+                <div class="about">
+                    <img src="{{ about.image.url }}">
+                </div>
+            {% endif %}
+            {% if about.videoEmbed %}
+                <div class="videoWrapper">
+                    {{ about.videoEmbed | safe }}
+                </div>
+            {% endif %}
+
+            <h3>{{ about.author }}</h3>
+            <p>{{ about.text | linebreaks | urlize }}</p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="contact content">
+            <h4>You want to do peopling?</h4>
+            <p>Sure ok. Message me on <a href="https://www.facebook.com/Amillionite/">facebook</a>
+                or <a href = "mailto: amillionite.ashturner@gmail.com">email</a></p>
+
+
+        </div>
+    </div>
+    <div>
+    <br/><br/><br/><br/>
+    </div>
+{% endblock content %}
+

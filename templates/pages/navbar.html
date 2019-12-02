@@ -1,0 +1,45 @@
+{% load static %}
+
+<!-- social media - youtube, instagram, bandcamp, facebook, spotify, Apple Music -->
+
+<!-- icon and text -->
+<div class="weird">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-link brand" href="{% url 'home' %}">
+                <img src="{% static "img/avatar_ash-removebg.png" %}" alt="">Amillionite
+            </a>
+        </div>
+
+        <!-- toggler/collapsible button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse justify-content-center" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto navright">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'news-preview' %}">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'music' %}">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'gigs' %}">Gigs</a>
+                </li>
+                {% comment %}<li class="nav-item">
+                <a class="nav-link" href="{% url 'works' %}">Writing</a>
+            </li>{% endcomment %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.redbubble.com/people/amillionite">Store</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+</div>
